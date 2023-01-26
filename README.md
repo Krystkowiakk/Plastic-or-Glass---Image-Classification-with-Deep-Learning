@@ -1,14 +1,15 @@
-# Plastic or Glass? - Image Classication with Deep Learning
+# Plastic or Glass? - Image Classification with Deep Learning
 ###### METIS Data Science and Machine Learning Bootcamp 2022 by Krystian Krystkowiak
 ###### project/month(6/7) focus: DEEP LEARNING
-#### Code - [GitHub](https://github.com/Krystkowiakk/Argentinian-Tango-Lyrics-Sentiment-Topics-NLP/blob/main/1.%20Krystkowiak_Krystian_Project_5_Argentinian%20Tango%20Lyrics%20Sentiment%20%26%20Topics%20NLP%20-%20cleaning.ipynb)
-#### Presentation [GitHub](https://github.com/Krystkowiakk/Argentinian-Tango-Lyrics-Sentiment-Topics-NLP/blob/main/Project%20Presentation/Krystkowiak_Krystian_Project_5_Argentinian%20Tango%20Lyrics%20Sentiment%20%26%20Topics%20NLP.pdf)
+#### Code - cleaning/preprocessing - [GitHub](https://github.com/Krystkowiakk/Plastic-or-Glass---Image-Classification-with-Deep-Learning/blob/main/1.%20Krystkowiak_Krystian_Project_5_Plastic%20or%20Glass%20-%20Image%20Classification%20with%20Deep%20Learning%20-%20image%20loading.ipynb)
+#### Code - [GitHub](https://github.com/Krystkowiakk/Plastic-or-Glass---Image-Classification-with-Deep-Learning/blob/main/2.%20Krystkowiak_Krystian_Project_5_Plastic%20or%20Glass%20-%20Image%20Classification%20with%20Deep%20Learning.ipynb)
+#### Presentation [GitHub](https://github.com/Krystkowiakk/Plastic-or-Glass---Image-Classification-with-Deep-Learning/blob/main/Project%20Presentation/Krystkowiak_Krystian_Project_5_Plastic%20or%20Glass%20-%20Image%20Classification%20with%20Deep%20Learning.pdf)
 
 ABSTRACT
 
 - Developed a deep learning model to classify glass and plastic waste photos (Kaggle
-competition dataset) using Tensor Flow and Keras, testing various models including Neural Networks, Convolutional Neural Networks, and Transfer learning with pre-trained models such as VGG16, VGG19, and Xception. Achieved a high F1 score of 90% with the CNN model.
-- This project aims to build a deep learning model that can classify glass and plastic waste photos. The goal is to achieve an acceptable F1 score and potentially integrate the model into more complex systems for use in modern sorting technologies. The dataset used for this project is "Images dataset for classifying household garbage" from Kaggle. The project begins with a logistic regression baseline model, then training, testing, and fine-tunning of different deep learning models. The best performing model, a refined Convolutional Neural Network (CNN), is then visualized and proposed as the final solution. The project uses Keynote and Tableau for visualization and presentation.
+competition dataset) using Tensor Flow and Keras, testing various models including Neural Networks, Convolutional Neural Networks, and Transfer learning with pre-trained models such as VGG16, VGG19, EfficientNetV2L and Xception.
+- This project aims to build a deep learning model that can classify glass and plastic waste photos. The goal is to achieve an acceptable F1 score and potentially integrate the model into more complex systems for use in modern sorting technologies. The dataset used for this project is "Images dataset for classifying household garbage" from Kaggle. The project begins with a logistic regression baseline model, then training, testing, and fine-tunning of different deep learning models. The best performing model, a refined VGG16, is then visualized and proposed as the final solution. The project uses Keynote and Tableau for visualization and presentation.
 
 DESIGN
 
@@ -28,20 +29,20 @@ ALGORITHMS
 
 The following models were trained and tested:
 
-- Logistic Regression (baseline model): F1 on training set: 0.470, F1 on validation set: 0.459
-- Neural Network model: F1 on training set: 0.960, F1 on validation set: 0.803
-- Convolutional Neural Network (best F1 and with smallest overfitting): F1 on training set: 0.945, F1 on validation set: 0.898
-- Transfer learning - VGG16 (second "best"): F1 on training set: 0.997, F1 on validation set: 0.861
-- Transfer learning - VGG19: F1 on training set: 0.990, F1 on validation set: 0.848
-- Transfer learning - Xception: F1 on training set: 0.999, F1 on validation set: 0.792
-- Transfer learning - VGG19 (how is it trained matters): F1 on training set: 0.213, F1 on validation set: 0.310
+- Logistic Regression (baseline model): F1 on validation set: 0.714
+- Neural Network model: F1 on validation set: 0.802
+- Convolutional Neural Network (CNN): F1 on validation set: 0.873
+- Transfer learning - VGG16: F1 on validation set: 0.879
+- Transfer learning - VGG19: F1 on validation set: 0.860
+- Transfer learning - EfficientNetV2L (how is it trained matters): F1 on validation set: 0.279
+- Transfer learning - Xception: F1 on validation set: 0.846
 
-The final model chosen for this project was the convolutional neural network (CNN) as it had the best F1 score and the smallest overfitting among the models tried.
+The final model chosen for this project was VGG16 as it presented slightly better F1 score and balanced other characteristics although CNN and VGG19 presented similar performance and may be the model of choice depending on fine-tuning.
 
 TOOLS
 
 - Python, Pandas, and Numpy for data processing
-- Scikit-learn, Keras, Tensorflow for modeling (Logistic Regression, Neural Network model, Convolutional Neural Network (CNN), Transfer learning using various pre-trained models: VGG16, VGG19, and Xception)
+- Scikit-learn, Keras, Tensorflow for modeling (Logistic Regression, Neural Network model, Convolutional Neural Network (CNN), Transfer learning using various pre-trained models: VGG16, VGG19, EfficientNetV2L and Xception)
 - Google Colab to test some of the models
 - Seaborn and Tableau for visualization
 
